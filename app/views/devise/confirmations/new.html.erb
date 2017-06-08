@@ -1,7 +1,9 @@
-<h4>Resend confirmation instructions</h4>
 <%= devise_error_messages! %>
 <div class="row">
-  <div class="col-md-4"> 
+  <div class="col-md-3"> 
+  </div>
+  <div class="col-md-6"> 
+    <h4>Resend confirmation instructions</h4>
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <div class="form-group">
         <%= f.label :email %><br />
@@ -12,6 +14,6 @@
       </div>
     <% end %>
   </div>
-  <div class="col-md-8"> 
+  <div class="col-md-3"> 
   </div>
 </div

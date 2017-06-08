@@ -38,7 +38,7 @@ RSpec.describe "User", :type => feature do
       fill_in "user_email", :with => std_user.email
       fill_in "user_password", :with => std_user.password
       click_button "Sign in"
-      expect(page).to have_content("Signed in successfully")
+      expect(page).to have_content("My Information")
     end
   end
   
@@ -46,7 +46,7 @@ RSpec.describe "User", :type => feature do
     scenario "allows registered user to view edit user info" do
       login_as(std_user)
       visit edit_user_registration_path
-      expect(page).to have_content("we need your current password to confirm your changes")
+      expect(page).to have_content("Edit User")
     end
 
     scenario "allows registered user to edit name" do
