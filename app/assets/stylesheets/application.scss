@@ -15,3 +15,25 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+body {
+  background-color: rgba(155, 185, 232, 0.1);
+}
+.tudu {
+  width: 100%;
+}
+.navdiv {
+  border-bottom: 1px solid rgba(155, 185, 232, 0.5);
+  background-color: white;
+}
+.navtab {
+  border-bottom: 0px;
+}
+.user-info {
+  margin-top: 10px;
+}
+.twitter-blue{
+  color: #428bca;
+}
+
