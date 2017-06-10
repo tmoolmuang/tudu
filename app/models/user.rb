@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  has_many :items         
  
   before_save { self.email = email.downcase if email.present? }
   before_save { self.role ||= :standard }

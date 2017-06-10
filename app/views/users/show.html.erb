@@ -3,3 +3,10 @@
 <p><%= @user.email %></p>
 <p>account created <%= distance_of_time_in_words(@user.confirmed_at, Time.now) %> ago</p>
 <p>last sign in on: <%= @user.last_sign_in_at.to_formatted_s(:db) %></p>
+
+<div class='items list-group'>
+  <%= render partial: 'items/item'%>
+</div>
+<div>
+  <%= render partial: 'items/form' %>
+</div>
