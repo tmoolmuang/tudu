@@ -1,4 +1,5 @@
 <div>
+  <h4>Item on the list:</h4>
   <% @items.each do |i| %>
     <p><%= i.name %> <small> (created <%= time_ago_in_words(i.created_at)%> ago)</small></p>
   <% end %>
