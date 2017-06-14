@@ -1,6 +1,9 @@
 <div>
   <h4>Item on the list:</h4>
   <% @items.each do |i| %>
-    <p><%= i.name %> <small> (created <%= time_ago_in_words(i.created_at)%> ago)</small></p>
+    <p>
+      <%= i.name %> <%= link_to "", {:action=>"destroy", :controller=>"items", :id=>i.id, :user_id=>i.user_id}, method: :delete, class: 'fa fa-check-square-o' %> 
+      <small> (created <%= time_ago_in_words(i.created_at)%> ago)</small>
+    </p>
   <% end %>
 </div>
