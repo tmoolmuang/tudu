@@ -1,9 +1,10 @@
 <div>
-  <h4>Item on the list:</h4>
+  <h4><u>To-do items on your list:</u></h4>
   <% @items.each do |i| %>
-    <p>
-      <%= i.name %> <%= link_to "", {:action=>"destroy", :controller=>"items", :id=>i.id, :user_id=>i.user_id}, method: :delete, class: 'fa fa-check-square-o' %> 
-      <small> (created <%= time_ago_in_words(i.created_at)%> ago)</small>
-    </p>
+    <%= content_tag :p, id: "item-#{i.id}" do %>
+    <%= i.name %> 
+      <%= link_to "", [i.user, i], method: :delete, class: 'fa fa-check-square-o', remote: true %>
+      <small>&nbsp;&nbsp;&nbsp;&nbsp;(created <%= time_ago_in_words(i.created_at)%> ago) - <%= i.days_left %> </small>
+    <% end %>
   <% end %>
 </div>

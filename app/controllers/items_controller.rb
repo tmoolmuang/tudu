@@ -12,9 +12,13 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
 
     if !@item.destroy
-       flash[:error] = "Item couldn't be removed. Try again."
+      flash[:error] = "Item couldn't be removed. Try again."
     end
-    redirect_to @item.user
+
+    respond_to do |format|
+      format.html 
+      format.js
+    end
   end
   
   private

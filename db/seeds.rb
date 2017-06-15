@@ -6,9 +6,10 @@ User.create!(
   confirmed_at: DateTime.now
 )
 
-5.times do
+12.times do
   Item.create!(
     name: Faker::Lorem.sentence(2, false, 2),
+    created_at: Date.today - Random.rand(1...10),
     user: User.first
   )
 end
