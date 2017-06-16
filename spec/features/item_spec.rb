@@ -8,7 +8,7 @@ RSpec.describe "Item", :type => feature do
     scenario 'allows user to view items' do
       login_as(std_user)
       visit user_path(std_user)
-      expect(page).to have_content 'Item on the list:'
+      expect(page).to have_content 'items on your list:'
     end
   end
   
