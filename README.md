@@ -10,7 +10,7 @@ The app is deployed on Heroku: https://tudu-tm.herokuapp.com/
 
 The source code is here on GitHub: https://github.com/tmoolmuang/tudu
 
-This app was created as part of the [Bloc](www.bloc.io) Web Developer Track.
+This app was created as part of the [Bloc](http://www.bloc.io) Web Developer Track.
 
 # Setup and Configuration
 
@@ -30,3 +30,4 @@ This app was created as part of the [Bloc](www.bloc.io) Web Developer Track.
 
 + rspec, capybara, database_cleaner for testing
 
+![tudu](https://user-images.githubusercontent.com/24881495/27246874-7a82fe24-52a9-11e7-973a-8c70b858b578.JPG)
