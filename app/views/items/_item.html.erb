@@ -1,10 +1,19 @@
 <div>
   <h4><u>To-do items on your list:</u></h4>
   <% @items.each do |i| %>
-    <%= content_tag :p, id: "item-#{i.id}" do %>
-    <%= i.name %> 
-      <%= link_to "", [i.user, i], method: :delete, class: 'fa fa-check-square-o', remote: true %>
-      <small>&nbsp;&nbsp;&nbsp;&nbsp;(created <%= time_ago_in_words(i.created_at)%> ago) - <%= i.days_left %> </small>
+    <%= content_tag :div, id: "item-#{i.id}" do %>
+      <div class="row">    
+          <div class="col-md-6">
+            <%= i.name %><%= link_to "", [i.user, i], method: :delete, class: 'fa fa-check-square-o', remote: true %>
+          </div>
+          <div class="col-md-4">
+            <small>created <%= time_ago_in_words(i.created_at)%> ago</small>
+          </div>
+          <div class="col-md-2">
+            <small><%= i.days_left %> </small>
+          </div>
+      </div>
     <% end %>
   <% end %>
 </div>
+
