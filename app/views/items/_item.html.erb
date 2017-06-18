@@ -4,7 +4,7 @@
     <%= content_tag :div, id: "item-#{i.id}" do %>
       <div class="row">    
           <div class="col-md-6">
-            <%= i.name %><%= link_to "", [i.user, i], method: :delete, class: 'fa fa-check-square-o', remote: true %>
+            <%= i.name %> <%= link_to "", [i.user, i], method: :delete, class: 'fa fa-check-square-o', remote: true %>
           </div>
           <div class="col-md-4">
             <small>created <%= time_ago_in_words(i.created_at)%> ago</small>
